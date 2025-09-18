@@ -245,6 +245,11 @@ footer {
     margin: 0 auto;
     opacity: .04;    
 }
+.hidden-text span {
+    font-size: .6rem;
+    display: block;
+    margin-top: -5px !important;
+}
 .hidden-text:hover {
     color: var(--primary-red);
     opacity: 1;
@@ -252,14 +257,18 @@ footer {
 .hidden-cr {
     display: none;
 }
+.hidden-cr-o {
+    opacity: 0;
+}
 .cr-container {
     width: fit-content;
     margin: 0 auto;
 }
-.cr-container:hover .cr {
+.cr-container:hover :first-child {
     display: none;
 }
-.cr-container:hover .hidden-cr {
+.cr-container:hover .hidden-cr, .cr-container:hover .hidden-cr-o {
     display: block;
+    opacity: 1;
     color: var(--primary-red);
 }
